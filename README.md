@@ -1,7 +1,16 @@
-毕设作品：SpringBoot + Vue3 健身身材管理系统                
-前后端分离：后端Fitness-springboot，前端Fitness-vscode，数据库Fitness-mysql。                             
-登陆账号：hehuicong                               
-登陆密码：123456                          
+- 项目简介 ：明确定义为基于 Spring Boot 2.6 和 Vue 3 的全方位健身管理平台。
+- 核心创新点 ：突出了多维度健康闭环、深度数据可视化、精细化管理赋能等项目特色。
+- 技术栈详情 ：
+- 后端 ：Spring Boot, MyBatis-Plus, MySQL, Spring Security, Lombok。
+- 前端 ：Vue 3.4, Vite, Element Plus, ECharts, Axios。
+- 功能拆解 ：
+- 用户端 ：仪表盘、训练管理、饮食追踪、身材记录、健康百科等。
+- 管理端 ：用户管理、课程管理（含订阅者详情）、知识管理、运营支持。
+- 视觉展示 ：保留并整理了原有的所有界面截图，采用表格布局，美观大方。
+- 快速开始指南 ：详细列出了数据库初始化、后端启动和前端启动的具体步骤。                                                                                         
+- 演示账号信息 ：保留了原有的测试账号，方便他人快速上手体验。
+- 登陆账号密码：管理员hehuicong 123456  用户bayunzi 123456
+  
 登陆注册页面：
 <img width="1910" height="915" alt="登陆页面" src="https://github.com/user-attachments/assets/97ae6f18-bc53-46eb-9350-a58ca476e9c3" />
 <img width="1910" height="915" alt="注册页面" src="https://github.com/user-attachments/assets/20be085a-bbfd-44cd-8cad-9dd04ec58ab2" />
