@@ -1,0 +1,24 @@
+mysql> CREATE TABLE `user` (
+  `id` BIGINT AUTO_INCREMENT PRIMARY KEY COMMENT 'ûID',
+  `username` VARCHAR(50) NOT NULL UNIQUE COMMENT 'ûΨһ¼ã',
+  `password` VARCHAR(100) NOT NULL COMMENT '루BCryptܴ洢',
+  `email` VARCHAR(100) UNIQUE COMMENT '䣨ѡһ룩',
+  `role` VARCHAR(20) DEFAULT 'USER' COMMENT '角色: ADMIN-管理员, USER-普通用户',
+  `create_time` DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT 'ʱ',
+  `update_time` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'ʱ'
+) COMMENT 'ϵͳû';
+
+-- 训练打卡记录表
+CREATE TABLE IF NOT EXISTS `workout_logs` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `username` VARCHAR(50) NOT NULL,
+  `plan_id` INT DEFAULT NULL,
+  `workout_name` VARCHAR(100) NOT NULL,
+  `type` VARCHAR(50),
+  `duration` INT,
+  `calories` INT,
+  `intensity` VARCHAR(20) DEFAULT '适中',
+  `content` TEXT,
+  `record_date` DATE NOT NULL,
+  `create_time` DATETIME DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

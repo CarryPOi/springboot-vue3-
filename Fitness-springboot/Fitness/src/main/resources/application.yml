@@ -1,0 +1,38 @@
+spring:
+  # 数据库连接配置（完全保留你的原有配置，无修改）
+  datasource:
+    url: jdbc:mysql://localhost:3306/Fitness-mysql?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  # 关闭 thymeleaf 缓存（保留你的原有配置）
+  thymeleaf:
+    cache: false
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 10MB
+# MyBatis-Plus 配置（保留你的原有配置 + 确认mapper路径）
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true  # 保留你的下划线转驼峰配置
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  # 保留你的SQL日志配置
+  global-config:
+    db-config:
+      id-type: auto  # 保留你的主键自增配置
+  mapper-locations: classpath:mapper/*.xml  # 保留你的Mapper.xml路径配置
+# 服务器配置（完全保留你的原有配置）
+server:
+  port: 8080  # 你的后端端口，无需修改
+  servlet:
+    context-path: /  # 接口根路径，无需修改
+# AI 分析配置
+ai:
+  mode: local  # 可选值: local (本地规则分析), ai (接入 DeepSeek)
+  deepseek:
+    api-key: your_api_key_here
+# cors:
+#   allowed-origins: http://localhost:8081
+#   allowed-methods: GET,POST,PUT,DELETE,OPTIONS
+#   allowed-headers: *
+#   allow-credentials: true
